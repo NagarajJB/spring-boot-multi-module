@@ -12,4 +12,12 @@
 
 	<packaging>jar</packaging>
 
+
+	<!-- to tell spring boot not to repackage, we have spring-boot-maven-plugin 
+		in root project, repackage is building fa/uber jar/with all dependencies, we 
+		skip it for modules like this to let it be just normal jar which can be distributed -->
+	<properties>
+		<spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+	</properties>
+
 </project>
